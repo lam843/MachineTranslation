@@ -1,8 +1,8 @@
-# Machine Translation
+## Machine Translation
 
 ===========================================================================================================
 Simple Machine Translation website using django  to translate from English to French along with a seq2seq model 
-===========================================================================================================
+
 
 
 OverView:
