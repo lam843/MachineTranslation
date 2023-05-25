@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>M&nbsp;A&nbsp;C&nbsp;H&nbsp;I&nbsp;N&nbsp;E&nbsp;&nbsp;T&nbsp;R&nbsp;A&nbsp;N&nbsp;S&nbsp;L&nbsp;A&nbsp;T&nbsp;I&nbsp;O&nbsp;N</title>
+    <link rel="icon" href="https://i.postimg.cc/L66V0P9Y/image-removebg-preview.png">
+    <style>
+        body {
+            background-image: url('https://1.bp.blogspot.com/-w_p6PaY-nm8/Xw8gAH4fPnI/AAAAAAAAGUw/8c_ECbx1GHQFkfJjHHt6WLO_tAvES0dggCLcBGAsYHQ/d/wallpaper-hd-1080p--aesthetic-jungle.jpg');
+            background-size: cover;
+            background-position: center;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            animation: bgAnimation 10s linear infinite;
+            font-family: Arial, sans-serif;
+        }
+    
+        @keyframes bgAnimation {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.1);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+    
+        .translation-container {
+            animation: fadeIn 1s ease-in-out;
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 8px;
+            max-width: fit-content;
+            margin: 0 auto;
+        }
+    
+    
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    
+        .translation-container h3 {
+            color: #800080;
+            font-size: 30px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin: 20px 0;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+            white-space: nowrap;
+        }
+    
+    
+        .translation-container form,
+        .translation-container h4,
+        .translation-container p {
+            margin: 10px 0;
+            color: #333;
+        }
+    
+        .translation-container input[type="submit"] {
+            background-color: #800080;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            transition-duration: 0.4s;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+    
+        .translation-container input[type="submit"]:hover {
+            background-color: #9370DB;
+        }
+    
+        .translation-container h4,
+        .translation-container p {
+            color: #dc94dc;
+        }
+    
+        .logo {
+            height: 24px;
+            margin-right: 10px;
+            vertical-align: middle;
+        }
+    
+        /* Modern text view styles */
+        .modern-text-view {
+            border: none;
+            resize: none;
+            background-color: #f7f7f7;
+            padding: 10px;
+            font-size: 16px;
+            line-height: 1.5;
+            color: #333;
+            width: 80%;
+            height: 60px;
+            border-radius: 3px;
+        }
+    </style>
+    </head>
+    <body>
+        <div class="translation-container">
+            <h3>English to French Translation</h3>
+            <form method="post" action="{% url 'translation' %}">
+                {% csrf_token %}
+                <label for="english_text">Enter English text:</label><br>
+                <textarea id="english_text" name="english_text" class="modern-text-view"></textarea><br><br>
+                <input type="submit" value="Translate">
+            </form>
+            {% if french_text %}
+                <h4>French Translation:</h4>
+                <textarea readonly class="modern-text-view">{{ french_text }}</textarea>
+            {% endif %}
+        </div>
+    </body>
+    </html>
+    
