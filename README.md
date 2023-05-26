@@ -16,3 +16,8 @@ Screen Record the testing :
   
 </details>
 
+<details>
+<summary> Presentation :</summary>
+![image](https://github.com/lam843/MachineTranslation/assets/78732216/963787af-1e18-4c4d-b523-1b6a63029998)
+</details>
+
