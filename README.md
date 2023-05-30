@@ -22,7 +22,9 @@ It's a simple Machine Translation website using django  to translate from Englis
 ![image](https://github.com/lam843/MachineTranslation/assets/78732216/963787af-1e18-4c4d-b523-1b6a63029998)
   
 </details>
-==========================================================================================================================
+
+============================================================================================
+
 
 ####  USAGE
 Pour exécuter ce projet Django, vous pouvez suivre ces étapes :
